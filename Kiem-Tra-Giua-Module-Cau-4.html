@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp lại mảng</title>
+</head>
+<body>
+    <script>
+        let array = [[1,2,3],
+                    [4,5,6],
+                    [7,8,9],
+                    [10,11,12,13,14,15],
+                    [16,17,18]];
+        let result = [];
+        
+        function createArray() {
+            for (let i = 0; i < array.length; i++) {
+                    if (i % 2 != 0) {
+                        for (let j = array[i].length-1; j >= 0; j--) {
+                            result.push(array[i][j]);
+                        }
+                    }else{
+                        for (let k = 0; k < array[i].length; k++) {
+                            result.push(array[i][k]);
+                        }
+                    }
+                }
+        }
+        function display() {
+            document.write('Mảng có sẵn là : <br>');
+            for (let t = 0; t < array.length; t++) {
+                document.write(array[t] + '<br>');
+            }
+            document.write('<br> Mảng mới được sắp xếp lại : <br>');
+            document.write(result);
+        }
+
+        createArray();
+        display();
+    </script>
+</body>
+</html>

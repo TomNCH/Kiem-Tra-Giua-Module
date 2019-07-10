@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố trong mảng</title>
+</head>
+<body>
+    <script>
+        let array = [];
+        let Num;
+        function inputNum() {
+            do {
+                Num = parseInt(prompt('Nhập các số cần kiểm tra (Ấn số 0 để dừng): '));
+                if (Num != 0) {
+                    array.push(Num);
+                }
+            }while(Num !== 0);
+        }
+        function Display() {
+            let result = [];
+            for (i = 0; i < array.length; i++) {
+                if (isPrime(array[i])) {
+                    result.push(array[i]);
+                }
+            }
+            document.write('Các số cần kiểm tra là  : ' + array + '<br>');
+            document.write('Các số nguyên tố là : ' + result);
+        }
+
+        function isPrime(Num) {
+            if (Num < 2) {
+                return  false;
+            }
+            for (let i = 2; i < Num; i++){
+                if (Num % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        inputNum();
+        Display();
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng đường chéo của mảng 2 chiều</title>
+</head>
+<body>
+    <script>
+        let array = [[1,2,3],
+                     [4,5,6],
+                     [7,8,9]];
+        let sum = 0;
+        function sumDiagonal() {
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i][i];
+            }
+        }
+
+        function display() {
+            document.write('Mảng có sẵn là : <br>');
+            for (let j = 0; j < array.length; j++) {
+                document.write(array[j] + '<br>');
+            }
+            document.write('<br> Tổng đường chéo của màng = ' + sum);
+        }
+
+        sumDiagonal();
+        display();
+    </script>
+</body>
+</html>
